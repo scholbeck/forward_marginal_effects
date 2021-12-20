@@ -6,7 +6,7 @@ library(mlr3learners)
 library(ggparty)
 library(ggplot2)
 library(latex2exp)
-source("paper/code/me_nlm_implementation.R")
+source("code/me_nlm_implementation.R")
 
 bh.task = tsk("boston_housing")
 bh.data = bh.task$data()
@@ -28,7 +28,7 @@ coefficientOfVariation = function(data) {
 bh.task = mlr3::TaskRegr$new(id = "bh.task", backend = bh.data, target = "medv")
 library(mlr3)
 library(mlr3learners)
-load('data/bh_tuning.rdata')
+load('tuning_data/bh_tuning.rdata')
 
 instance$result
 learner = mlr_learners$get("regr.ksvm")

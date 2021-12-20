@@ -1,5 +1,5 @@
-source("paper/code/me_nlm_implementation.R")
-source("paper/code/helperfct_treesplits.R")
+source("code/me_nlm_implementation.R")
+source("code/helperfct_treesplits.R")
 library(partykit)
 library(parttree)
 library(ggplot2)
@@ -26,7 +26,7 @@ colnames(df_total) = c('x', 'y')
 tsk = TaskRegr$new(id = "sim.task", backend = df_total, target = 'y')
 learner = mlr_learners$get("regr.ksvm")
 
-load("paper/code/simulation_ksvm_tuning.rdata")
+load("tuning_data/simulation_ksvm_tuning.rdata")
 learner$param_set$values = list(C = instance$result$C,
                                 sigma = instance$result$sigma,
                                 type = 'eps-svr', kernel = 'rbfdot')

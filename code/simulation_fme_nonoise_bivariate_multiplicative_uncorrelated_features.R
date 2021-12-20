@@ -1,5 +1,5 @@
-source("paper/code/me_nlm_implementation.R")
-source("paper/code/me_nlm_implementation_datagenprocess.R")
+source("code/me_nlm_implementation.R")
+source("code/me_nlm_implementation_datagenprocess.R")
 library(partykit)
 library(parttree)
 library(ggplot2)
