@@ -9,6 +9,7 @@ rm(df)
 names(friedman) = c(paste("x", seq(1:10), sep = ""), "y")
 str(friedman)
 
+# devtools::install_github("holgstr/fme")
 library(fmeffects)
 devtools::load_all()
 
